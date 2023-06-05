@@ -29,6 +29,9 @@ DEBUG = ast.literal_eval(os.environ.get("DEBUG", "True"))
 
 ALLOWED_HOSTS = [] if DEBUG else [os.environ.get("SITE_HOST")]
 
+if not DEBUG:
+    CSRF_TRUSTED_ORIGINS = [os.environ.get("SITE_ROOT")]
+
 
 # Application definition
 
