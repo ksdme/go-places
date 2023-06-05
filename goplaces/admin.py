@@ -9,7 +9,7 @@ from goplaces.models import Link
 
 @admin.register(Link)
 class LinkModelAdmin(ModelAdmin):
-    list_display = ("id", "keyword", "url", "active")
+    list_display = ("keyword", "url", "active")
     form = LinkModelForm
 
     def get_form(self, request: Any, *args: Any, **kwargs: Any) -> Any:
