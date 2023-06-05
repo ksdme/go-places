@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.11"
 django = "^4.2.1"
 django-unfold = "^0.6.5"
+whitenoise = "^6.4.0"
 
 
 [tool.poetry.group.dev.dependencies]
