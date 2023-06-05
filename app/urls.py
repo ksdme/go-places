@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from goplaces.views import idle
 from goplaces.views import handle_link
 
 admin.site.site_header = "go/places"
@@ -22,6 +23,7 @@ admin.site.site_title = "go/places"
 admin.site.index_title = "Dashboard"
 
 urlpatterns = [
+    path("", idle),
     path("places/", admin.site.urls),
     path("<str:keyword>/", handle_link),
 ]

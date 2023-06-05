@@ -3,6 +3,10 @@ from django.shortcuts import redirect
 from goplaces.models import Link
 
 
+def idle(_):
+    return redirect("admin:index")
+
+
 @login_required(login_url="admin:login")
 def handle_link(request, keyword):
     keyword = keyword.lower()
