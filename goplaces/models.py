@@ -11,6 +11,9 @@ def validate_keyword(value):
     if not value.islower():
         raise ValidationError("Keyword needs to be lower case.")
 
+    if value in ("places",):
+        raise ValidationError(f"{value} is a reserved keyword.")
+
 
 class Link(models.Model):
     owner = models.ForeignKey(auth.get_user_model(), on_delete=models.CASCADE, related_name="links")
