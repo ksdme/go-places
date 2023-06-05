@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "goplaces"
+version = "0.1.0"
+description = ""
+authors = ["Kilari Teja <kilariteja9@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.1"
+django-unfold = "^0.6.5"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
